@@ -21,6 +21,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                             if (k == i) continue;
                             for (int z = 0; z < points.Count; z++){
                                 if (z == i) continue;
+                          
                                 Enums.PointInPolygon status = HelperMethods.PointInTriangle(points[i], points[j], points[k], points[z]);
                                 if (status == Enums.PointInPolygon.Inside || status == Enums.PointInPolygon.OnEdge){
                                     points.Remove(points[i]);
