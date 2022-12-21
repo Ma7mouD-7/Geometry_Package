@@ -41,9 +41,9 @@ namespace CGAlgorithms.Algorithms.ConvexHull
         }
 
         public double distance(Point p1, Point p2)
-        { 
+        {
             return ((p1.X - p2.X) * (p1.X - p2.X) + (p1.Y - p2.Y) * (p1.Y - p2.Y));
-             
+
         }
         public override void Run(List<Point> points, List<Line> lines, List<Polygon> polygons, ref List<Point> outPoints, ref List<Line> outLines, ref List<Polygon> outPolygons)
         {
@@ -76,7 +76,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
 
             }
 
-            int min_idx = idx , cur_idx = idx;
+            int min_idx = idx, cur_idx = idx;
             Point cur_point = points[idx];
 
             List<Point> ans = new List<Point>();
@@ -102,7 +102,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                 for (int i = 0; i < sz; i++)
                 {
                     Point temper = points[i];
-                    
+
                     Enums.TurnType pos = HelperMethods.CheckTurn(segment, temper);
                     if (pos == Enums.TurnType.Right)
                     {
@@ -112,7 +112,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                     }
                     else if (pos == Enums.TurnType.Colinear)
                     {
-                       
+
                         double cur_dist = distance(cur_point, next_point);
                         double temp_dist = distance(cur_point, temper);
                         if (temp_dist > cur_dist)
@@ -127,7 +127,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                 if (nxt_idx == min_idx)
                     break;
 
-                
+
                 ans.Add(next_point);
                 cur_point = next_point;
                 cur_idx = nxt_idx;

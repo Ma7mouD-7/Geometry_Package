@@ -1,4 +1,4 @@
-using CGUtilities;
+﻿using CGUtilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -119,7 +119,6 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                 
                 /*  Just like get last two element in your stack */
                 /*  check dir if in your link else remove top element and check again */
-                
                 int lst = hullPoints.Count - 1;
                 Point st = hullPoints[lst - 1];
                 Point en = hullPoints[lst];
