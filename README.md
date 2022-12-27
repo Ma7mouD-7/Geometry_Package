@@ -1,5 +1,8 @@
 ## Geometry_Package
 
+Team 11  
+Dept: SC
+
 > Convex Hull Algorithms  
 
 | |Algorithm       |Status                         |
